@@ -1,0 +1,25 @@
+{
+  "short_name": "mxtsx",
+  "name": "mxtsx dev",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "30x29",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "icon192x188.png",
+      "type": "image/png",
+      "sizes": "192x188"
+    },
+    {
+      "src": "icon512x423.png",
+      "type": "image/png",
+      "sizes": "512x423"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
