@@ -1,6 +1,6 @@
 import {NavLink} from "react-router-dom";
 import s from "./Header.module.css";
-import React, {useState} from "react";
+import React, {Dispatch, SetStateAction, useState} from "react";
 import {useSelector} from "react-redux";
 import {getLanguage} from "../../redux/languageSelectors";
 import {getHeaderText} from "../../redux/headerSelectors";
@@ -23,12 +23,12 @@ const Header: React.FC = React.memo(() => {
                     <img src={collapseMinus} alt="collapseMinus"/> :
                     <img src={collapsePlus} alt="collapsePlus"/>}
             </button>
-            <HeaderNavbar />
+            <HeaderNavbar setIsOpen={setIsOpen} />
         </header>
     )
 })
 
-const HeaderNavbar: React.FC = React.memo(() => {
+const HeaderNavbar: React.FC<{setIsOpen: Dispatch<SetStateAction<boolean>>}> = React.memo(({setIsOpen}) => {
     const currentLanguage = useSelector(getLanguage)
     const text = useSelector(getHeaderText)
     return(
@@ -42,7 +42,7 @@ const HeaderNavbar: React.FC = React.memo(() => {
             <LanguageSelectForm />
             {text.map((m) => {
                 return(
-                    <NavLink key={m.id} exact to={m.path} activeClassName={s.active}>
+                    <NavLink onClick={() => setIsOpen(false)} key={m.id} exact to={m.path} activeClassName={s.active}>
                         {m.title[currentLanguage]}
                     </NavLink>
                 )
