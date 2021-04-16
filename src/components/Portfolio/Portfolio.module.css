@@ -1,0 +1,74 @@
+.portfolioContainer, .contentWrapper, .portfolioProject{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.portfolioContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.contentWrapper {
+    width: 380px;
+    padding-top: 1rem;
+}
+
+.contentWrapper .portfolioProject {
+    padding-bottom: 1rem;
+}
+
+.contentWrapper .portfolioProject .portfolioProjectItem {
+    padding-bottom: 0.75rem;
+}
+
+.contentWrapper .portfolioProject .portfolioProjectName {
+    font-weight: bold;
+    font-size: x-large;
+    margin-bottom: 0;
+}
+
+.contentWrapper .portfolioProject .portfolioProjectDescription {
+    font-style: italic;
+    text-align: center;
+}
+
+.contentWrapper .portfolioProject .portfolioProjectNote {
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+    font-size: 80%;
+}
+
+.contentWrapper .portfolioProject .portfolioProjectUrl {
+    text-decoration: none;
+    color: black;
+}
+
+.homeTransition-appear{
+    opacity: 0;
+}
+
+.homeTransition-appear.homeTransition-appear-active{
+    opacity: 1;
+    transition: all .5s ease-in-out;
+}
+
+.contentWrapper .portfolioProject .portfolioProjectUrl:hover {
+    color: rgba(0, 0, 0, 0.5);
+    transition: 300ms color;
+}
+
+@media (max-width: 415px) {
+    .contentWrapper {
+        width: 90%;
+    }
+
+    .contentWrapper .portfolioProject .portfolioProjectName {
+        font-size: large;
+    }
+    .contentWrapper .portfolioProject .portfolioProjectDescription, .contentWrapper .portfolioProject .portfolioProjectUrl {
+        font-size: small;
+    }
+}

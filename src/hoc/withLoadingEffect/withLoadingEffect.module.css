@@ -1,0 +1,13 @@
+.componentInvisible, .componentVisible {
+    height: 100%;
+    width: 100%;
+}
+
+.componentInvisible {
+    opacity: 0;
+}
+
+.componentVisible {
+    opacity: 1;
+    transition: 1000ms opacity;
+}

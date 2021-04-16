@@ -1,0 +1,38 @@
+.contentWrapper {
+    width: 80vw;
+    min-height: 100vh;
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+      "h h"
+      "m m"
+      "f f";
+    grid-template-rows: 88px auto 50px;
+    grid-template-columns: 100%;
+    font-family: 'Source Sans Pro', "Helvetica Neue", "TeX Gyre Heros", "Nimbus Sans L", "Liberation Sans", sans-serif;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.main {
+    position: relative;
+    grid-area: m;
+}
+
+::selection {
+    background: rgba(105, 105, 105, 0.3);
+}
+::-moz-selection {
+    background: rgba(105, 105, 105, 0.3);
+}
+
+@media (max-width: 960px) {
+    .contentWrapper {
+        width: 100vw;
+    }
+}
+
+@media (max-height: 370px) {
+    .contentWrapper {
+        grid-template-rows: 88px auto 25px;
+    }
+}

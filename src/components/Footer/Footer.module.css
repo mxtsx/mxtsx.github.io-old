@@ -1,0 +1,18 @@
+.footer {
+    position: relative;
+    grid-area: f;
+    height: 100%;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .copyright {
+    font-size: small;
+}
+
+.footer .copyrightIcon {
+    font-size: small;
+}

@@ -1,0 +1,51 @@
+.contactContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentWrapper {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-bottom: 5rem;
+}
+
+.contentWrapper .contact {
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+
+.contentWrapper .contact a {
+    display: flex;
+    align-items: center;
+    text-decoration-line: none;
+    color: black;
+}
+
+.contentWrapper .contact a:hover {
+    color: rgba(0, 0, 0, 0.5);
+    transition: 300ms color;
+}
+
+.contentWrapper .contact img {
+    height: 25px;
+    padding-right: 0.5rem;
+}
+
+.contentWrapper .contact .clickableImg:hover {
+    opacity: 0.65;
+    transition: 300ms opacity;
+}
+
+@media (max-height: 370px) {
+    .contentWrapper {
+        padding: 0;
+    }
+}

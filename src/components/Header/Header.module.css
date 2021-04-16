@@ -1,0 +1,172 @@
+.header {
+    position: relative;
+    grid-area: h;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(105, 105, 105, 0.5);
+    transition: 500ms all ease-out;
+    z-index: 1;
+}
+
+.logo {
+    height: 40px;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.logo .name {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.logo .level {
+    font-size: 90%;
+}
+
+.navWidth360 {
+    width: 360px;
+}
+
+.navWidth370 {
+    width: 370px;
+}
+
+.navWidth400 {
+    width: 440px;
+}
+
+.navWidth460 {
+    width: 500px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav a {
+    text-decoration-line: none;
+    color: black;
+}
+
+.nav a:hover, .nav a.active {
+    color: rgba(255, 255, 255, 0.7);
+    transition: 300ms color;
+}
+
+@media (min-width: 795px) {
+    .collapseButton {
+        display: none;
+    }
+}
+
+@media (max-width: 795px) {
+    .nav {
+        display: none;
+    }
+
+    .collapseButton {
+        height: 40px;
+        width: 40px;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        outline: none;
+        padding: 0;
+    }
+
+    .collapseButton img {
+        width: 100%;
+        transition: 300ms opacity;
+    }
+
+    .collapseButton img:hover {
+        opacity: 0.5;
+    }
+
+    .headerOpened {
+        height: 120%;
+        display: grid;
+        grid-template-areas:
+      "l b"
+      "n n";
+        grid-template-rows: 30% 70%;
+        grid-template-columns: 50%;
+        background: rgba(105, 105, 105, 1);
+    }
+
+    .headerOpened .logo {
+        grid-area: l;
+        align-self: flex-start;
+        justify-self: flex-start;
+    }
+
+    .headerOpened .collapseButton {
+        grid-area: b;
+        align-self: flex-start;
+        justify-self: flex-start;
+    }
+
+    .headerOpened .nav {
+        position: absolute;
+        bottom: 0;
+        grid-area: n;
+        display: flex;
+        justify-self: center;
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 540px) {
+    .headerOpened {
+        height: 270%;
+        grid-template-rows: 18% 82%;
+    }
+
+    .headerOpened .nav {
+        position: absolute;
+        height: 90%;
+        width: 100%;
+        align-self: flex-end;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media (max-width: 450px) {
+    .headerOpened {
+        height: 250%;
+        grid-template-rows: 40px 80%;
+    }
+
+    .collapseButton {
+        height: 35px;
+        width: 35px;
+    }
+
+    .headerOpened .collapseButton {
+        grid-area: b;
+        align-self: center;
+        justify-self: flex-start;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .logo .name{
+        font-size: 100%;
+    }
+
+    .logo .level{
+        font-size: 80%;
+    }
+}
