@@ -9,7 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)),
   url("background.jpg");
-  background-size: 110rem 110vh;
+  background-size: cover;
   background-position: bottom left;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -30,16 +30,31 @@ code {
   }
 }
 
-@media (min-width: 100vw) {
-  html, body {
-    width: max-content;
+@media (max-width:670px) {
+  #root {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+  }
+  #root:after {
+    content: " ";
+    position: absolute;
+    left:0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -10;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), url('background1000.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(0.3rem);
   }
 }
 
-@media only screen and (max-width:670px) {
-  body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), url('background1000.jpg');
-    background-position: top center;
-    background-size: 110rem 110vh;
+@media (min-width: 100vw) {
+  html, body {
+    width: max-content;
   }
 }
