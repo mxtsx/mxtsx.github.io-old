@@ -27,7 +27,8 @@
 
 @media (max-width: 960px) {
     .contentWrapper {
-        width: 100vw;
+        min-width: 100%;
+        width: min-content;
     }
 }
 
