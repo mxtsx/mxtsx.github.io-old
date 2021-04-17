@@ -7,7 +7,7 @@
     justify-content: space-between;
     align-items: center;
     background: rgba(105, 105, 105, 0.5);
-    transition: 400ms all;
+    transition: 300ms background linear, 300ms height linear;
     z-index: 1;
 }
 
