@@ -35,6 +35,7 @@ code {
     top: 0;
     left: 0;
     position: fixed;
+    position: -webkit-sticky;
     min-width: 100%;
     width: max-content;
     min-height: 100vh;
