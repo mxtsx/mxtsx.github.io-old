@@ -47,5 +47,6 @@
         font-size: small;
         text-align: center;
         padding-bottom: 0.25rem;
+        text-indent: 0;
     }
 }

@@ -26,12 +26,12 @@ const useStyles = makeStyles((theme: Theme) =>
                 color: "rgb(0, 0, 0)",
                 transition: "200ms color"
             },
-            "& .MuiPopover-paper": {
-                backgroundColor: "lightgray",
-                transition: "200ms background-color"
-            },
             "& .MuiListItem-root.Mui-selected, .MuiListItem-root.Mui-selected:hover": {
-                backgroundColor: "rgba(255, 255, 255, 0.25)"
+                backgroundColor: "rgba(255, 255, 255, 0.25)",
+            },
+            "& .MuiMenu-paper": {
+                backgroundColor: "lightgray",
+                maxHeight: "max-content"
             }
         },
         formControlPaddingUkrRus: {
@@ -70,7 +70,14 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         resize:{
             fontFamily: "Source Sans Pro",
-            fontSize:16.5
+            fontSize: 16.5,
+        },
+        menuStyle: {
+            "& .MuiPaper-root": {
+                position: "absolute",
+                backgroundColor: "lightgray",
+                maxHeight: "min-content"
+            }
         }
     })
 )
@@ -87,6 +94,7 @@ const LanguageSelectForm: React.FC = React.memo(() => {
         <FormControl variant="outlined" size={"small"} className={classes.formControl}>
             <InputLabel id="select-outlined-label" className={cn((classes.resize))}>{selectLabel[language]}</InputLabel>
             <Select
+                MenuProps={{ className: classes.menuStyle }}
                 labelId="select-outlined-label"
                 id="select-outlined"
                 value={language}

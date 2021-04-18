@@ -32,13 +32,16 @@ code {
 
 @media (max-width:670px) {
   #root {
-    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    position: fixed;
+    min-width: 100%;
+    width: max-content;
     min-height: 100vh;
+    height: min-content;
+    overflow: hidden
   }
-  #root:after {
+  #root:before {
     content: " ";
     position: absolute;
     left:0;
