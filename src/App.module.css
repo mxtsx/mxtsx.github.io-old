@@ -33,6 +33,12 @@
     }
 }
 
+@media (max-width: 670px) {
+    .contentWrapper {
+        grid-template-rows: 88px minmax(82vh, min-content) 30px;
+    }
+}
+
 @media (max-height: 370px) {
     .contentWrapper {
         grid-template-rows: 88px auto 25px;
