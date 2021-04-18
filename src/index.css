@@ -39,7 +39,6 @@ code {
     width: max-content;
     min-height: 100vh;
     height: min-content;
-    overflow: hidden
   }
   #root:before {
     content: " ";
