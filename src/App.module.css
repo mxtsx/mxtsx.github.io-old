@@ -11,6 +11,8 @@
     grid-template-columns: 100%;
     font-family: 'Source Sans Pro', "Helvetica Neue", "TeX Gyre Heros", "Nimbus Sans L", "Liberation Sans", sans-serif;
     background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(0.3rem);
+    z-index: 0;
 }
 
 .main {
@@ -41,6 +43,6 @@
 
 @media (max-height: 370px) {
     .contentWrapper {
-        grid-template-rows: 88px auto 25px;
+        grid-template-rows: 88px minmax(70vh, min-content) 25px;
     }
 }
