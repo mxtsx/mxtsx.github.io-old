@@ -17,7 +17,7 @@ const App: React.FC = React.memo(() => {
     useLayoutEffect(() => {
         setTimeout(() => {
             setIsReady(true)
-        }, 1000)
+        }, 1500)
     }, [])
 
     if (!isReady) {
