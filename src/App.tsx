@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useLayoutEffect, useState} from 'react';
 import s from './App.module.css';
 import Header from "./components/Header/Header";
 import Homepage from "./components/Homepage/Homepage";
@@ -8,9 +8,21 @@ import Contacts from "./components/Contact/Contacts";
 import About from "./components/About/About";
 import Footer from "./components/Footer/Footer";
 import Error404 from "./components/Error 404/Error 404";
+import Preloader from "./components/common/Preloader/Preloader";
 
 
 const App: React.FC = React.memo(() => {
+    const [isReady, setIsReady] = useState(false)
+
+    useLayoutEffect(() => {
+        setTimeout(() => {
+            setIsReady(true)
+        }, 1000)
+    }, [])
+
+    if (!isReady) {
+        return <Preloader />
+    }
     return (
         <div className={s.contentWrapper}>
             <Header/>
