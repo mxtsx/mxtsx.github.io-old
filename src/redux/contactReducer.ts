@@ -13,7 +13,7 @@ const initialState = {
         },
         {
             image: linkedin,
-            url: "https://www.linkedin.com/in/maksym-stepanets-85169a20b/",
+            url: "https://www.linkedin.com/in/mxtsx/",
             name: "LinkedIn",
             id: 2
         },
