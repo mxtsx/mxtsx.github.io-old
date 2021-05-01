@@ -14,7 +14,7 @@ import {getError} from "../../redux/errorSelectors";
 
 type TextType = { title: { eng: string; ukr: string; rus: string; cz: string; hr: string; }; path: string; id: number; }[]
 
-const Header: React.FC = () => {
+const Header: React.FC = React.memo(() => {
     const [isOpen, setIsOpen] = useState(false)
     const text = useSelector(getHeaderText)
     const currentPage: Array<string> = useMemo(() => [], [])
@@ -35,7 +35,7 @@ const Header: React.FC = () => {
                           currentPage={currentPage} />
         </header>
     )
-}
+})
 
 const Title: React.FC<{text: TextType, currentPage: Array<string>}> = React.memo(({text, currentPage}) => {
     const currentLanguage = useSelector(getLanguage)
