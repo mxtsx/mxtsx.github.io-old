@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme: Theme) =>
         menuStyle: {
             "& .MuiPaper-root": {
                 position: "absolute",
-                backgroundColor: "lightgray",
+                backgroundColor: "#E9E9E9",
                 maxHeight: "min-content"
             }
         }
