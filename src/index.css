@@ -24,12 +24,6 @@ code {
     monospace;
 }
 
-@media (max-width: 960px) {
-  html, body {
-    min-height: min-content;
-  }
-}
-
 @media (max-width:670px) {
   #root {
     top: 0;

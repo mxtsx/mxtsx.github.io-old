@@ -7,3 +7,7 @@ export const getHeaderText = (state: AppStateType) => {
 export const getLabelText = (state: AppStateType) => {
     return state.header.selectLabel
 }
+
+export const getCurrentPageTitle = (state: AppStateType) => {
+    return state.header.currentPage
+}

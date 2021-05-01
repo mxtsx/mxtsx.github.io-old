@@ -23,14 +23,12 @@ function withQueryStringComponent<WCP> (Component: React.ComponentType<WCP>) {
                 pathname: actualQueryString,
                 search: queryString.stringify(query)
             })
-            // eslint-disable-next-line
-        }, [currentLanguage, history.location.search])
+        }, [currentLanguage, history.location.search, history])
         useEffect(() => {
             const parsed = queryString.parse(history.location.search.substring(1)) as QueryStringType
             let actualLanguage = parsed.lang as LanguageType
             dispatch(actions.languageChanged(actualLanguage))
-            // eslint-disable-next-line
-        }, [])
+        })
         return <Component {...props} />
     }
 }

@@ -7,6 +7,13 @@ const initialState = {
         rus: "Страница не существует",
         cz: "Stránka neexistuje",
         hr: "Stranica ne postoji"
+    },
+    error: {
+        eng: "Error",
+        ukr: "Помилка",
+        rus: "Ошибка",
+        cz: "Chyba",
+        hr: "Greška"
     }
 }
 
