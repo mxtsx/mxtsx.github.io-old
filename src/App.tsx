@@ -16,7 +16,7 @@ const App: React.FC = React.memo(() => {
     useEffect(() => {
         setTimeout(() => {
             setIsReady(true)
-        }, 3000)
+        }, 1500)
     }, [])
 
     if (!isReady) {
