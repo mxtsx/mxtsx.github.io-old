@@ -1,23 +1,22 @@
-import React, {useLayoutEffect, useState} from 'react';
-import s from './App.module.css';
+import React, {useEffect, useState} from 'react';
+import s from "./App.module.css"
+import Preloader from "./components/common/Preloader/Preloader";
 import Header from "./components/Header/Header";
-import Homepage from "./components/Homepage/Homepage";
 import {Route, Switch} from "react-router-dom";
+import About from "./components/About/About";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Contacts from "./components/Contact/Contacts";
-import About from "./components/About/About";
-import Footer from "./components/Footer/Footer";
+import Homepage from "./components/Homepage/Homepage";
 import Error404 from "./components/Error 404/Error 404";
-import Preloader from "./components/common/Preloader/Preloader";
-
+import Footer from "./components/Footer/Footer";
 
 const App: React.FC = React.memo(() => {
     const [isReady, setIsReady] = useState(false)
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         setTimeout(() => {
             setIsReady(true)
-        }, 1500)
+        }, 3000)
     }, [])
 
     if (!isReady) {
