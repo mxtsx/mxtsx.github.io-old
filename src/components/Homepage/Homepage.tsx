@@ -7,6 +7,7 @@ import {compose} from "redux";
 import withQueryStringComponent from "../../hoc/withQueryString";
 import withLoadingEffect from "../../hoc/withLoadingEffect/withLoadingEffect";
 import {getContactText} from "../../redux/contactSelectors";
+import {isMail} from "../../utils/isMail";
 
 const Homepage: React.FC = React.memo(() => {
     const currentLanguage = useSelector(getLanguage)
@@ -26,7 +27,7 @@ const Homepage: React.FC = React.memo(() => {
                 <div className={h.links}>
                     {contacts.map(m => {
                         return (
-                            <a key={m.id} href={m.url}>
+                            <a key={m.id} href={m.url} target={isMail(m.url) ? "_self" : "_blank"} rel={"noopener noreferrer"}>
                                 <img src={m.image} alt={m.name}/>
                             </a>
                         )

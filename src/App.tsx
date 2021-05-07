@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useLayoutEffect, useState} from 'react';
 import s from "./App.module.css"
 import Preloader from "./components/common/Preloader/Preloader";
 import Header from "./components/Header/Header";
@@ -13,7 +13,7 @@ import Footer from "./components/Footer/Footer";
 const App: React.FC = React.memo(() => {
     const [isReady, setIsReady] = useState(false)
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         setTimeout(() => {
             setIsReady(true)
         }, 1500)

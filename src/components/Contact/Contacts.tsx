@@ -5,6 +5,7 @@ import withQueryStringComponent from "../../hoc/withQueryString";
 import withLoadingEffect from "../../hoc/withLoadingEffect/withLoadingEffect";
 import {useSelector} from "react-redux";
 import {getContactText} from "../../redux/contactSelectors";
+import {isMail} from "../../utils/isMail";
 
 const Contacts: React.FC = React.memo( () => {
     const contacts = useSelector(getContactText)
@@ -14,10 +15,10 @@ const Contacts: React.FC = React.memo( () => {
                 {contacts.map((m) => {
                     return(
                         <div key={m.id} className={c.contact}>
-                            <a href={m.url}>
+                            <a href={m.url} target={isMail(m.url) ? "_self" : "_blank"} rel={"noopener noreferrer"}>
                                 <img src={m.image} alt={m.name} className={c.clickableImg}/>
                             </a>
-                            <a href={m.url}>{m.name}</a>
+                            <a href={m.url} target={isMail(m.url) ? "_self" : "_blank"} rel={"noopener noreferrer"}>{m.name}</a>
                         </div>
                     )
                 })}

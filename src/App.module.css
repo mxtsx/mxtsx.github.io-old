@@ -43,6 +43,6 @@
 
 @media (max-height: 370px) {
     .contentWrapper {
-        grid-template-rows: 88px minmax(70vh, min-content) 25px;
+        grid-template-rows: 88px minmax(75vh, min-content) 25px;
     }
 }
