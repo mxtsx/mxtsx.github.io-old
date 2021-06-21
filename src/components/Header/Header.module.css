@@ -92,7 +92,7 @@
     }
 
     .headerOpened {
-        height: 120%;
+        height: 170%;
         display: grid;
         grid-template-areas:
       "l b"

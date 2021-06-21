@@ -1,22 +1,42 @@
 body {
-  min-height: 100vh;
-  min-width: 100vw;
-  margin: 0;
+  padding: 0 !important;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-shadow: inset 0 0 2rem rgba(0, 0, 0, 0.5);
+  text-shadow: 0.02rem 0.02rem 0.1rem rgba(0, 0, 0, 0.2);
+  font-size: 101%;
+  overflow-y: auto !important;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)),
   url("background.jpg");
   background-size: cover;
   background-position: bottom left;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  z-index: -1;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   backdrop-filter: blur(0.3rem);
-  box-shadow: inset 0 0 2rem rgba(0, 0, 0, 0.5);
-  text-shadow: 0.02rem 0.02rem 0.1rem rgba(0, 0, 0, 0.2);
-  font-size: 101%;
+  z-index: -1;
 }
 
 code {
@@ -24,15 +44,16 @@ code {
     monospace;
 }
 
-@media (max-width:700px) {
+@media (max-width: 700px) {
   body {
+    background-size: cover;
     background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), url('background1000.jpg');
     background-attachment: initial;
   }
-}
-
-@media (min-width: 100vw) {
-  html, body {
-    width: max-content;
+  body::before {
+    display: none;
+  }
+  body::after {
+    display: none;
   }
 }

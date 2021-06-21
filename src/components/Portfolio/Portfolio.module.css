@@ -15,12 +15,20 @@
     padding-top: 1rem;
 }
 
+.portfolioProjectItem {
+    text-align: center;
+}
+
 .contentWrapper .portfolioProject {
     padding-bottom: 1rem;
 }
 
 .contentWrapper .portfolioProject .portfolioProjectItem {
     padding-bottom: 0.75rem;
+}
+
+.portfolioProjectUrl {
+    padding-bottom: 0.25rem;
 }
 
 .contentWrapper .portfolioProject .portfolioProjectName {

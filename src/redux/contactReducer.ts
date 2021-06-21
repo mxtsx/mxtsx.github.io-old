@@ -19,8 +19,8 @@ const initialState = {
         },
         {
             image: email,
-            url: "mailto: mxdottsx@gmail.com",
-            name: "mxdottsx@gmail.com",
+            url: "mailto: mxtsx@pm.me",
+            name: "mxtsx@pm.me",
             id: 3
         }
     ]
