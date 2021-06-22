@@ -17,9 +17,9 @@ const ProjectInformation: React.FC<PropsType> = React.memo(({name, description, 
         <div className={p.portfolioProject}>
             <h1 className={cn(p.portfolioProjectItem, p.portfolioProjectName)}>{id}. {name}</h1>
             <span className={cn(p.portfolioProjectItem, p.portfolioProjectDescription)}>{description}</span>
-            <a href={url} className={cn(p.portfolioProjectUrl)}>{url.substring(8)}</a>
-            <a href={codeUrl} className={cn(p.portfolioProjectItem, p.portfolioProjectUrl)}>Code source: {codeUrl.substring(8)}</a>
-            {downloadUrl && <a href={downloadUrl} className={cn(p.portfolioProjectItem, p.portfolioProjectUrl)}>Download</a>}
+            <a href={url} target={"_blank"} rel={"noopener noreferrer"} className={cn(p.portfolioProjectUrl)}>{url.substring(8)}</a>
+            <a href={codeUrl} target={"_blank"} rel={"noopener noreferrer"} className={cn(p.portfolioProjectItem, p.portfolioProjectUrl)}>Code source: {codeUrl.substring(8)}</a>
+            {downloadUrl && <a href={downloadUrl} target={"_blank"} rel={"noopener noreferrer"} className={cn(p.portfolioProjectItem, p.portfolioProjectUrl)}>Download</a>}
             {notes && notes.map((m, index) => <span key={index} className={p.portfolioProjectNote}>{m}</span>)}
         </div>
     )
