@@ -14,16 +14,21 @@ const Portfolio: React.FC = React.memo(() => {
     return (
         <div className={p.portfolioContainer}>
             <div className={p.contentWrapper}>
-                {text[currentLanguage].map((m: any, index: any) =>
-                    <ProjectInformation
-                        key={index}
-                        name={m.name}
-                        description={m.description}
-                        codeUrl={m.codeUrl}
-                        url={m.url}
-                        downloadUrl={m.downloadUrl}
-                        id={m.id}
-                        notes={m.notes}/>)}
+                {text.map((m: any, index) => {
+                    console.log(m)
+                    return(
+                        <ProjectInformation
+                            key={index}
+                            name={m.name[currentLanguage]}
+                            description={m.description[currentLanguage]}
+                            codeUrl={m.codeUrl}
+                            url={m.url}
+                            downloadUrl={m.downloadUrl}
+                            id={m.id}
+                            notes={m.notes && m.notes[currentLanguage]}
+                        />
+                    )
+                })}
             </div>
         </div>
     )
